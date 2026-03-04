@@ -1,0 +1,5 @@
+create a new module name math_utils.
+
+1. create 3 functions -> 1. add to take 2 paras and return addition
+                        2. multiply to return multiplication of those two paras
+                       h  3. area to calculate area (radiius para) :- PI*radius**2
