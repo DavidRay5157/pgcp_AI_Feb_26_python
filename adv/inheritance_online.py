@@ -32,10 +32,10 @@ b1.feature2()
 b1.feature3()
 b1.feature4()
 print("after B class")
-c1 = C()
-c1.feature1()
+c1 = C()   # object is only for C
+c1.feature1()  # this is feature of class A
 c1.feature2()
-c1.feature3()
+c1.feature3()  # feature of class B
 c1.feature4()
 c1.feature5()
 print("after C class")
