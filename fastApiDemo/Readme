@@ -1,0 +1,7 @@
+create a Virtual Environment :- python -m venv myenv   # myenv is the name of the virtual environment.
+activate your environemnt :- copy the path and paste to activate, for powershell - activate.ps1, for cmd = .bat
+
+install fastapi and uvicorn server :- pip install fastapi uvicorn
+
+to run the server :- go inside your directory of fastApi
+command :- uvicorn main:app --reload
