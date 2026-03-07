@@ -5,3 +5,10 @@ install fastapi and uvicorn server :- pip install fastapi uvicorn
 
 to run the server :- go inside your directory of fastApi
 command :- uvicorn main:app --reload
+
+
+##########################3
+for unusual behaviour of server :-
+find process :- netstat -ano | findstr :8000
+kill the process :- taskkill /PID 12345 /F
+kill all python process :- taskkill /IM python.exe /F
