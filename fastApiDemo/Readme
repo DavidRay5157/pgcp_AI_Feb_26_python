@@ -12,3 +12,13 @@ for unusual behaviour of server :-
 find process :- netstat -ano | findstr :8000
 kill the process :- taskkill /PID 12345 /F
 kill all python process :- taskkill /IM python.exe /F
+
+
+step 1 : - install postgres db connector and sqlalchemy (ORM) to your project
+         - pip install sqlalchemy psycopg2
+
+step 2 :- create a database directory for db configuration
+        - create db.py for db connection configuration .
+        - database_models.py <= this is needed for sqlalchemy to understand what and where to create.
+step 3 :- in main.py app file, add the engine that holds the configuration, and create the db initializer method
+          to create a session.
