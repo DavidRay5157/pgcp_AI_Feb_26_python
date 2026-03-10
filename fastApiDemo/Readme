@@ -22,3 +22,7 @@ step 2 :- create a database directory for db configuration
         - database_models.py <= this is needed for sqlalchemy to understand what and where to create.
 step 3 :- in main.py app file, add the engine that holds the configuration, and create the db initializer method
           to create a session.
+
+step 4 :- place the frontend folder into your project root directory
+       :- npm install
+       :- npm start

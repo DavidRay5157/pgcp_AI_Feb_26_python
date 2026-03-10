@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Depends
+from starlette.middleware.cors import CORSMiddleware
 
 from models.models import Product
 from database import database_models
@@ -6,6 +7,14 @@ from database.db import session, engine
 from sqlalchemy.orm import Session
 
 app = FastAPI()   # this is fastapi object after import
+
+# for CORS persmission
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],   # if you mention * the origin request to come here can be from anywhere
+    allow_credentials=True,
+    allow_methods=["*"],
+)
 
 products = [
 
