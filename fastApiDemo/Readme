@@ -14,15 +14,57 @@ kill the process :- taskkill /PID 12345 /F
 kill all python process :- taskkill /IM python.exe /F
 
 
-step 1 : - install postgres db connector and sqlalchemy (ORM) to your project
-         - pip install sqlalchemy psycopg2
+virtual environemnt command :- python -m venv myenv
 
-step 2 :- create a database directory for db configuration
-        - create db.py for db connection configuration .
-        - database_models.py <= this is needed for sqlalchemy to understand what and where to create.
-step 3 :- in main.py app file, add the engine that holds the configuration, and create the db initializer method
-          to create a session.
+activate the environment :- copy the path and paste, for powershell .ps1 and cmd = .bat
 
-step 4 :- place the frontend folder into your project root directory
-       :- npm install
-       :- npm start
+first install fastapi and uvicorn inside the vir. env => pip install fastapi uvicorn
+
+**  step 1:- create the main.py file and create the greet function .
+    import fastApi and create the object of it.
+
+    # add the get method in greet.
+
+**  step 2 :- usage of pydantic.
+    # create the get all products method for get method.
+
+**  step 3 :- create the models. with the constructor
+    in main.py import products,
+
+**  step 4 :- import baseModel from pydantic for data validation in models.
+
+
+** step 5 :- create the product_by_id method.
+
+** step 6:- create post method, add_product
+
+to run inside fastApiDemo directory:-> uvicorn main:app --reload
+
+
+for swagger api:- already built in fastApi
+http://127.0.0.1:8000/docs  <- just use docs
+
+use SQLAlchemy <- it is python sql toll and object relational mapper
+
+** step 7 :-  pip install sqlalchemy psycopg2  <- postgres connector
+** step 8 :-  create a database folder. create a db.py connection file
+
+** step 9 :- create product orm file in database folder, because model is pydantic and won't be recognized by DB
+
+import db files in main.py
+
+** step 10 :- create the database metadata line in main.py
+
+** step 11 : - create the init_db function for initializing db with dummy data
+
+ === **product.model_dump())  <- model dump is giving dictionary, but want to cenvert in db models, 
+                            so unpacking is required, so use **.
+
+** step 12 :-  deb db function for open and close connection
+
+** step 13 :- import session and injec in the methods
+
+** step 14 :- run frontEnd :- go to frontend folder.
+                            - npm install
+                            - npm start
+                            - add cors in main backend file for error.
